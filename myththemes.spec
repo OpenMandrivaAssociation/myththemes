@@ -1,7 +1,7 @@
 
 %define name    myththemes
 %define version 0.20
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: 	Additional themes for mythtv's frontend
 Name: 		%{name}
