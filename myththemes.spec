@@ -1,7 +1,18 @@
 
 %define name    myththemes
 %define version 0.20
-%define release %mkrel 3
+%define rel     1
+%define fixes 13646
+
+# When "fixes" branch takes over from the stable release
+# change the constant below to the last stable rel number.
+# "rel" can then be reset to 1 at that point and any future
+# dump of the "fixes" patchset.
+%if %fixes
+%define release %mkrel 3.%fixes.%rel
+%else
+%define release %mkrel %rel
+%endif
 
 Summary: 	Additional themes for mythtv's frontend
 Name: 		%{name}
@@ -10,7 +21,11 @@ Release: 	%{release}
 License: 	GPL
 Group: 		Video
 URL: 		http://www.mythtv.org/
+%if %fixes
+Source0: 	%{name}-%{version}-%{fixes}.tar.bz2
+%else
 Source0: 	%{name}-%{version}.tar.bz2
+%endif
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 BuildRequires:	qt3-devel
