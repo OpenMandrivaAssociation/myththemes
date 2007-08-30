@@ -1,15 +1,11 @@
 
 %define name    myththemes
-%define version 0.20
+%define version 0.20.2
 %define rel     1
-%define fixes 13646
+%define fixes 14301
 
-# When "fixes" branch takes over from the stable release
-# change the constant below to the last stable rel number.
-# "rel" can then be reset to 1 at that point and any future
-# dump of the "fixes" patchset.
 %if %fixes
-%define release %mkrel 3.%fixes.%rel
+%define release %mkrel %fixes.%rel
 %else
 %define release %mkrel %rel
 %endif
