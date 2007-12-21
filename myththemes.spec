@@ -22,6 +22,7 @@ Source0: 	%{name}-%{version}-%{fixes}.tar.bz2
 %else
 Source0: 	%{name}-%{version}.tar.bz2
 %endif
+BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 BuildRequires:	qt3-devel
 BuildRequires:	libmyth-devel >= %{version}
