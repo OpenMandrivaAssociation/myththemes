@@ -1,11 +1,11 @@
 
 %define name    myththemes
-%define version 0.20.2
-%define fixes 14301
-%define rel     2
+%define version 0.21
+%define fixes 15924
+%define rel     1
 
 %if %fixes
-%define release %mkrel %fixes.%rel
+%define release %mkrel 0.%fixes.%rel
 %else
 %define release %mkrel %rel
 %endif
