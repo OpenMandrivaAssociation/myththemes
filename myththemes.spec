@@ -1,14 +1,10 @@
 
 %define name    myththemes
 %define version 0.21
-%define fixes 16317
+%define fixes 16505
 %define rel     1
 
-%if %fixes
-%define release %mkrel 0.%fixes.%rel
-%else
-%define release %mkrel %rel
-%endif
+%define release %mkrel %fixes.%rel
 
 Summary: 	Additional themes for mythtv's frontend
 Name: 		%{name}
@@ -17,11 +13,7 @@ Release: 	%{release}
 License: 	GPL
 Group: 		Video
 URL: 		http://www.mythtv.org/
-%if %fixes
 Source0: 	%{name}-%{version}-%{fixes}.tar.bz2
-%else
-Source0: 	%{name}-%{version}.tar.bz2
-%endif
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 BuildRequires:	qt3-devel
