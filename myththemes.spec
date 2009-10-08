@@ -1,8 +1,8 @@
 
 %define name    myththemes
-%define version 0.21
-%define fixes 17137
-%define rel     2
+%define version 0.22
+%define fixes 22304
+%define rel     0.1
 
 %define release %mkrel %fixes.%rel
 
@@ -16,7 +16,7 @@ URL: 		http://www.mythtv.org/
 Source0: 	%{name}-%{version}-%{fixes}.tar.bz2
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
-BuildRequires:	qt3-devel
+BuildRequires:	qt4-devel
 BuildRequires:	libmyth-devel >= %{version}
 
 %description
