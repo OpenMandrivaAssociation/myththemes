@@ -1,7 +1,7 @@
 
 %define name    myththemes
 %define version 0.23
-%define fixes 24661
+%define fixes 25111
 %define rel     1
 
 %define release %mkrel %fixes.%rel
