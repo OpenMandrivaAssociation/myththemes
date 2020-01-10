@@ -47,7 +47,7 @@ Base themes are contained in the mythtv-themes-base package.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 ./configure --prefix=%{_prefix}
