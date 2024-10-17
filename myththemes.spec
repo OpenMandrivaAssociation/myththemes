@@ -17,7 +17,7 @@ Version: 	%{version}
 Release: 	%{release}
 License: 	GPL
 Group: 		Video
-URL: 		http://www.mythtv.org/
+URL: 		https://www.mythtv.org/
 Source0: 	%{name}-%{version}.tar.bz2
 %if %{fixesdate}
 Patch1: fixes-%{gitversion}.patch
